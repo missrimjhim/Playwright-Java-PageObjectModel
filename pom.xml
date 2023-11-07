@@ -40,7 +40,12 @@
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports-version}</version>
 		</dependency>
-
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <optional>true</optional>
+</dependency>
 
 
 	</dependencies>
@@ -66,14 +71,12 @@
 				<configuration>
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-					<suiteXmlFiles>
+				<!--	<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>-->
+								<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/testrunners/testng_regressions.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 
 					</suiteXmlFiles>
-
-
 
 				</configuration>
 			</plugin>
